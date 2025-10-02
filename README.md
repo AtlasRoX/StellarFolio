@@ -1,4 +1,4 @@
-# GhostCache - Developer Portfolio
+# GhostCache - Developer Portfolio (StellarFolio)
 
 This is a dynamic and customizable developer portfolio application built with Next.js and Supabase. It's designed to showcase your skills, experience, and projects in a professional and visually appealing way.
 
