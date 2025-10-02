@@ -1,5 +1,6 @@
 'use client';
 
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/lib/theme-provider';
@@ -48,6 +49,7 @@ export default function RootLayout({
             </>
           )}
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
