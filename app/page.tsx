@@ -1,6 +1,8 @@
 import { ResumeView } from "@/components/resume/resume-view"
 import { getPersonalInfo, getExperiences, getEducation, getSkills, getProjects, getServices, getTestimonials } from "@/lib/db/queries"
 
+export const dynamic = 'force-dynamic'
+
 export default async function HomePage() {
   try {
     const personalInfo = await getPersonalInfo()
