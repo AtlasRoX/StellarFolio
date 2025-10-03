@@ -2,6 +2,7 @@
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
+import Script from 'next/script';
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/lib/theme-provider';
@@ -52,6 +53,15 @@ export default function RootLayout({
         </ThemeProvider>
         <SpeedInsights />
         <Analytics />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-07W8QD4W82"></Script>
+        <Script>
+          {'''
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-07W8QD4W82');
+          '''}
+        </Script>
       </body>
     </html>
   );
