@@ -54,13 +54,13 @@ export default function RootLayout({
         <SpeedInsights />
         <Analytics />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-07W8QD4W82"></Script>
-        <Script>
-          {'''
+        <Script id="google-analytics">
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-07W8QD4W82');
-          '''}
+          `}
         </Script>
       </body>
     </html>
