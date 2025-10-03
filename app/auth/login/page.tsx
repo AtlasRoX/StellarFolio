@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
+import Cookies from "js-cookie"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
@@ -18,7 +19,7 @@ export default function LoginPage() {
   const router = useRouter()
 
   useEffect(() => {
-    const accessGranted = sessionStorage.getItem("admin_access_granted")
+    const accessGranted = Cookies.get("admin_access_granted")
     if (!accessGranted) {
       router.push("/auth")
     }
